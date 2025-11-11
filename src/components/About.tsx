@@ -8,26 +8,26 @@ const About = () => {
         
         <div className="bg-card border border-border rounded-2xl p-8 md:p-12 space-y-6">
           <p className="text-lg text-foreground leading-relaxed">
-            I'm a passionate storyteller who believes in the power of words to move hearts and minds. 
-            My journey into creative writing began with a simple love for stories—the kind that make you 
-            think, feel, and see the world differently.
+            Étudiante en informatique passionnée par l'IoT, les systèmes embarqués et le développement mobile, 
+            je me spécialise en Flutter et en développement Full Stack. J'ai réalisé plusieurs projets innovants, 
+            dont un système de monitoring d'énergie avec visualisation en temps réel.
           </p>
           
           <p className="text-lg text-foreground leading-relaxed">
-            Over the years, I've honed my craft across various mediums, from scripts and screenplays to 
-            compelling narratives that resonate with diverse audiences. I thrive on the challenge of 
-            transforming ideas into engaging content that captivates and inspires.
+            Active dans la vie associative et les hackathons (CyberBenders AI Challenge, Hack for Health, CTF), 
+            j'ai renforcé mes compétences techniques et mon esprit d'équipe. De Monastir à mes études actuelles, 
+            mon objectif est de poursuivre un master en France et de devenir professeure.
           </p>
           
           <p className="text-lg text-foreground leading-relaxed">
-            When I'm not writing, you'll find me exploring new perspectives, diving into creative projects, 
-            or simply observing the world around me—always searching for the next story worth telling.
+            Curieuse et motivée, j'apprends vite et m'adapte facilement aux nouvelles technologies. 
+            Quand je ne code pas, vous me trouverez en train d'écouter du rap tunisien ou d'explorer de nouveaux horizons musicaux.
           </p>
           
           <div className="pt-6 border-t border-border">
             <p className="text-lg font-semibold text-primary mb-2">What I Love:</p>
             <div className="flex flex-wrap gap-3">
-              {["Storytelling", "Creative Writing", "Script Development", "Character Building", "Narrative Design"].map((item) => (
+              {["IoT Systems", "Flutter Development", "Full Stack", "Embedded Systems", "Music & Rap Tunisien"].map((item) => (
                 <span
                   key={item}
                   className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-foreground"

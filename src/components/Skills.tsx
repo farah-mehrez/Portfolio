@@ -1,13 +1,13 @@
-import { Pen, FileText, Lightbulb, Users, BookOpen, Film } from "lucide-react";
+import { Cpu, Smartphone, Database, Code2, Server, Lightbulb } from "lucide-react";
 
 const Skills = () => {
   const skills = [
-    { name: "Script Writing", level: 95, icon: Pen },
-    { name: "Creative Thinking", level: 90, icon: Lightbulb },
-    { name: "Storytelling", level: 95, icon: BookOpen },
-    { name: "Content Creation", level: 85, icon: FileText },
-    { name: "Collaboration", level: 88, icon: Users },
-    { name: "Screenplay", level: 92, icon: Film },
+    { name: "IoT & Embedded Systems", level: 90, icon: Cpu },
+    { name: "Flutter & Dart", level: 88, icon: Smartphone },
+    { name: "Firebase & Databases", level: 85, icon: Database },
+    { name: "Full Stack Development", level: 82, icon: Code2 },
+    { name: "React & Node.js", level: 80, icon: Server },
+    { name: "Python & Laravel", level: 78, icon: Lightbulb },
   ];
 
   return (

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -17,8 +18,8 @@ const Hero = () => {
             <div className="absolute inset-0 bg-primary rounded-full blur-2xl opacity-30 animate-pulse" />
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50">
               <img
-                src="/placeholder.svg"
-                alt="Profile"
+                src={profileImage}
+                alt="Farah Mehrez - Web Developer"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -29,14 +30,13 @@ const Hero = () => {
         <div className="flex-1 text-center md:text-left animate-slide-in-right">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             Hello, I'm{" "}
-            <span className="text-gradient">Your Name</span>
+            <span className="text-gradient">Farah Mehrez</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Script Writer | Creative Thinker | Storyteller
+            Web Developer | Web Designer
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-            Crafting compelling narratives that inspire, engage, and leave lasting impressions.
-            With a passion for words and storytelling, I bring ideas to life through creative writing.
+            IoT • Flutter • Projects that move people — Building innovative solutions with passion for technology.
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
             <Button

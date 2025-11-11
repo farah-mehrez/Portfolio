@@ -5,27 +5,27 @@ import { ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "The Silent Echo",
-      description: "A compelling screenplay exploring themes of memory and identity through a non-linear narrative structure.",
-      category: "Screenplay",
+      title: "Car Rental Application",
+      description: "Full requirements analysis and Scrum planning with complete architecture notes. Built with modern web technologies and RESTful API design.",
+      category: "Full Stack",
       link: "#",
     },
     {
-      title: "Voices Unheard",
-      description: "Documentary script highlighting untold stories from marginalized communities with powerful testimonials.",
-      category: "Documentary",
+      title: "Gym Management System",
+      description: "Adapted from car rental structure, featuring member management, scheduling, and payment processing with real-time updates.",
+      category: "Web App",
       link: "#",
     },
     {
-      title: "Urban Dreams",
-      description: "A series of interconnected short stories capturing the essence of city life and human connections.",
-      category: "Creative Writing",
+      title: "Student Attendance Flutter App",
+      description: "Real-time attendance tracking system with Firebase integration. Features QR code scanning, analytics dashboard, and push notifications.",
+      category: "Mobile App",
       link: "#",
     },
     {
-      title: "Midnight Conversations",
-      description: "A dialogue-driven piece exploring philosophical questions through intimate late-night exchanges.",
-      category: "Script",
+      title: "CyberBenders AI Challenge",
+      description: "Hackathon project combining cybersecurity and AI. Explored RNN/GRU models for social engineering awareness and threat detection.",
+      category: "IoT & AI",
       link: "#",
     },
   ];
