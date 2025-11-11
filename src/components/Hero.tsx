@@ -38,13 +38,21 @@ const Hero = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
             IoT • Flutter • Projects that move people — Building innovative solutions with passion for technology.
           </p>
-          <div className="flex gap-4 justify-center md:justify-start">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Button
               onClick={() => scrollToSection("projects")}
               className="btn-hero"
             >
               View My Work
             </Button>
+            <a href="/CV_Farah_Mehrez.pdf" download="CV_Farah_Mehrez.pdf">
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-300"
+              >
+                Download CV
+              </Button>
+            </a>
             <Button
               onClick={() => scrollToSection("contact")}
               variant="outline"

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Linkedin, Instagram, Github } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -24,9 +24,9 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Mail, href: "mailto:your.email@example.com", label: "Email" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Github, href: "https://github.com", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/farah-mehrez", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/farah-mehrez", label: "GitHub" },
+    { icon: Instagram, href: "https://www.instagram.com/faraah_mehrez", label: "Instagram" },
   ];
 
   return (
