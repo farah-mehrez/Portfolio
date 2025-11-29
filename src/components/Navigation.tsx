@@ -15,11 +15,13 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Timeline", href: "#timeline" },
+    { label: "Accueil", href: "#" },
+    { label: "À propos", href: "#about" },
+    { label: "Compétences", href: "#skills" },
+    { label: "Projets", href: "#projects" },
+    { label: "Expériences", href: "#experience" },
+    { label: "Vie Associative", href: "#leadership" },
+    { label: "Formation", href: "#timeline" },
     { label: "Contact", href: "#contact" },
   ];
 

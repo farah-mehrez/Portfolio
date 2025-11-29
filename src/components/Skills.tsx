@@ -2,22 +2,36 @@ import { Cpu, Smartphone, Database, Code2, Server, Lightbulb } from "lucide-reac
 
 const Skills = () => {
   const skills = [
-    { name: "IoT & Embedded Systems", level: 90, icon: Cpu },
-    { name: "Flutter & Dart", level: 88, icon: Smartphone },
-    { name: "Firebase & Databases", level: 85, icon: Database },
-    { name: "Full Stack Development", level: 82, icon: Code2 },
-    { name: "React & Node.js", level: 80, icon: Server },
-    { name: "Python & Laravel", level: 78, icon: Lightbulb },
+    { name: "IoT & Systèmes Embarqués", level: 4, description: "Développement de systèmes embarqués et solutions IoT", icon: Cpu },
+    { name: "Flutter & Dart", level: 4, description: "Développement d'applications mobiles cross-platform", icon: Smartphone },
+    { name: "Firebase & Bases de données", level: 4, description: "Gestion de bases de données et services cloud", icon: Database },
+    { name: "Développement Full Stack", level: 3, description: "Applications web complètes frontend et backend", icon: Code2 },
+    { name: "React & Node.js", level: 3, description: "Frameworks modernes pour applications web", icon: Server },
+    { name: "Python & Laravel", level: 3, description: "Backend et développement web avec frameworks", icon: Lightbulb },
   ];
+
+  const renderDots = (level: number) => {
+    return Array.from({ length: 4 }, (_, i) => (
+      <div
+        key={i}
+        className={`w-2 h-2 rounded-full ${
+          i < level ? "bg-primary" : "bg-primary/20"
+        }`}
+      />
+    ));
+  };
 
   return (
     <section id="skills" className="section-container">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center animate-fade-in">
-          My <span className="text-primary">Skills</span>
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-fade-in">
+          Matrice de <span className="text-primary">Compétences</span>
         </h2>
+        <p className="text-center text-muted-foreground mb-12 text-lg">
+          Un aperçu complet de mes capacités techniques et de mon expertise
+        </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
@@ -26,25 +40,18 @@ const Skills = () => {
                 className="animate-slide-up bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-bold">{skill.name}</h3>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-1">{skill.name}</h3>
-                    <p className="text-sm text-muted-foreground">{skill.level}%</p>
+                  <div className="flex gap-1">
+                    {renderDots(skill.level)}
                   </div>
                 </div>
-                
-                <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full transition-all duration-1000"
-                    style={{
-                      width: `${skill.level}%`,
-                      animationDelay: `${index * 0.1}s`,
-                    }}
-                  />
-                </div>
+                <p className="text-sm text-muted-foreground">{skill.description}</p>
               </div>
             );
           })}

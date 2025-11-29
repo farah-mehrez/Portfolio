@@ -1,40 +1,82 @@
 const About = () => {
+
   return (
     <section id="about" className="section-container animate-fade-in">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-          About <span className="text-primary">Me</span>
-        </h2>
-        
-        <div className="bg-card border border-border rounded-2xl p-8 md:p-12 space-y-6">
-          <p className="text-lg text-foreground leading-relaxed">
-            Étudiante en informatique passionnée par l'IoT, les systèmes embarqués et le développement mobile, 
-            je me spécialise en Flutter et en développement Full Stack. J'ai réalisé plusieurs projets innovants, 
-            dont un système de monitoring d'énergie avec visualisation en temps réel.
-          </p>
-          
-          <p className="text-lg text-foreground leading-relaxed">
-            Active dans la vie associative et les hackathons (CyberBenders AI Challenge, Hack for Health, CTF), 
-            j'ai renforcé mes compétences techniques et mon esprit d'équipe. De Monastir à mes études actuelles, 
-            mon objectif est de poursuivre un master en France et de devenir professeure.
-          </p>
-          
-          <p className="text-lg text-foreground leading-relaxed">
-            Curieuse et motivée, j'apprends vite et m'adapte facilement aux nouvelles technologies. 
-            Quand je ne code pas, vous me trouverez en train d'écouter du rap tunisien ou d'explorer de nouveaux horizons musicaux.
-          </p>
-          
-          <div className="pt-6 border-t border-border">
-            <p className="text-lg font-semibold text-primary mb-2">What I Love:</p>
-            <div className="flex flex-wrap gap-3">
-              {["IoT Systems", "Flutter Development", "Full Stack", "Embedded Systems", "Music & Rap Tunisien"].map((item) => (
-                <span
-                  key={item}
-                  className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-foreground"
-                >
-                  {item}
-                </span>
-              ))}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Left Section: SYSTEM DIAGNOSTICS */}
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase tracking-wider mb-6">
+            À propos 
+            </h2>
+            
+            <div className="space-y-6">
+              <div>
+                
+                <p className="text-foreground/80 leading-relaxed">
+                  Étudiante en ingénierie des systèmes informatiques , spécialisée en IoT, 
+                  systèmes embarqués et développement mobile. Mon parcours a commencé par une fascination 
+                  pour la façon dont la technologie peut résoudre des problèmes réels et améliorer les 
+                  capacités humaines.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase tracking-wider mb-6">Mission</h2>
+                <p className="text-foreground/80 leading-relaxed">
+                  Utiliser les technologies de pointe pour créer des systèmes intelligents qui comprennent, 
+                  s'adaptent et répondent aux besoins humains. Je me spécialise dans le développement de 
+                  solutions IoT et mobiles qui comblent le fossé entre la technologie complexe et les 
+                  expériences utilisateur intuitives.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section: Terminal */}
+          <div className="bg-[#1e1e1e] border border-border rounded-lg overflow-hidden shadow-lg">
+            {/* Terminal Header */}
+            <div className="bg-[#2d2d2d] px-3 py-2 flex items-center gap-2 border-b border-border">
+              <div className="flex gap-1.5">
+                <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+              </div>
+              <span className="text-xs text-muted-foreground ml-2">terminal@farah:~</span>
+            </div>
+
+            {/* Terminal Content */}
+            <div className="p-4 font-mono text-xs space-y-2">
+              <div>
+                <span className="text-green-400">$</span>
+                <span className="text-foreground ml-1.5">system --status</span>
+                <div className="mt-0.5 text-green-400 text-[10px]">STATUS: ONLINE</div>
+              </div>
+
+              <div className="mt-2">
+                <span className="text-green-400">$</span>
+                <span className="text-foreground ml-1.5">bio --fetch</span>
+                <div className="mt-1.5 space-y-0.5 text-foreground/80 text-[10px] leading-relaxed">
+                  <div>Name: <span className="text-primary">Farah Mehrez</span></div>
+                  <div>Location: <span className="text-primary">Tunisia</span></div>
+                  <div>Education: <span className="text-primary">Ingénierie des Systèmes informatique</span></div>
+                  <div>Specialization: <span className="text-primary">IoT, Mobile, Full Stack</span></div>
+                  <div>Status: <span className="text-green-400">Available</span></div>
+                </div>
+              </div>
+
+              <div className="mt-2">
+                <span className="text-green-400">$</span>
+                <span className="text-foreground ml-1.5">mission --describe</span>
+                <div className="mt-0.5 text-foreground/80 text-[10px] leading-relaxed">
+                  Building intelligent systems that enhance human capabilities.
+                </div>
+              </div>
+
+              <div className="mt-2 flex items-center">
+                <span className="text-green-400">$</span>
+                <span className="ml-1.5 w-1.5 h-3 bg-primary animate-pulse"></span>
+              </div>
             </div>
           </div>
         </div>

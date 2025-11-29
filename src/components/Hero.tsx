@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50">
               <img
                 src={profileImage}
-                alt="Farah Mehrez - Web Developer"
+                alt="Farah Mehrez - Développeuse Web"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -29,28 +29,28 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="flex-1 text-center md:text-left animate-slide-in-right">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            Hello, I'm{" "}
+            Bonjour, je suis{" "}
             <span className="text-gradient">Farah Mehrez</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Web Developer | Web Designer
+            Développeuse Web/Mobile & IoT
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-            IoT • Flutter • Projects that move people — Building innovative solutions with passion for technology.
+            IoT • Flutter • Construire des solutions innovantes avec passion pour la technologie.
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Button
               onClick={() => scrollToSection("projects")}
               className="btn-hero"
             >
-              View My Work
+              Voir mes projets
             </Button>
             <a href="/CV_Farah_Mehrez.pdf" download="CV_Farah_Mehrez.pdf">
               <Button
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-300"
               >
-                Download CV
+                Télécharger le CV
               </Button>
             </a>
             <Button
@@ -58,7 +58,7 @@ const Hero = () => {
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-300"
             >
-              Get In Touch
+              Me contacter
             </Button>
           </div>
         </div>

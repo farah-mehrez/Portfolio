@@ -5,59 +5,63 @@ import { ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Car Rental Application",
-      description: "Full requirements analysis and Scrum planning with complete architecture notes. Built with modern web technologies and RESTful API design.",
+      title: "Application de Location de Voitures",
+      description: "Analyse complète des exigences et planification Scrum avec notes d'architecture complètes. Construit avec des technologies web modernes et une conception d'API RESTful.",
       category: "Full Stack",
-      link: "#",
+      link: "https://github.com/farah-mehrez",
+      image: require('../assets/car-rental.jpg'),
+      
     },
     {
-      title: "Gym Management System",
-      description: "Adapted from car rental structure, featuring member management, scheduling, and payment processing with real-time updates.",
-      category: "Web App",
-      link: "#",
+      title: "Système de Gestion de Salle de Sport",
+      description: "Adapté de la structure de location de voitures, avec gestion des membres, planification et traitement des paiements avec mises à jour en temps réel.",
+      category: "Application Web",
+      link: "https://github.com/farah-mehrez",
+      image: require('../gym-management.jpg'),
     },
     {
-      title: "Student Attendance Flutter App",
-      description: "Real-time attendance tracking system with Firebase integration. Features QR code scanning, analytics dashboard, and push notifications.",
-      category: "Mobile App",
-      link: "#",
+      title: "Application Flutter de Présence Étudiante",
+      description: "Système de suivi de présence en temps réel avec intégration Firebase. Fonctionnalités : scan de code QR, tableau de bord analytique et notifications push.",
+      category: "Application Mobile",
+      link: "https://github.com/farah-mehrez",
+      image: require('../school-app.jpg'),
     },
-    {
-      title: "CyberBenders AI Challenge",
-      description: "Hackathon project combining cybersecurity and AI. Explored RNN/GRU models for social engineering awareness and threat detection.",
-      category: "IoT & AI",
-      link: "#",
-    },
+   
   ];
 
   return (
     <section id="projects" className="section-container bg-gradient-to-b from-background to-background/50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-fade-in">
-          Featured <span className="text-primary">Projects</span>
+          Projets <span className="text-primary">Phares</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 text-lg">
-          A showcase of my creative work and storytelling
+          Une vitrine de mon travail créatif et de mes réalisations
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card
               key={project.title}
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 group animate-slide-up"
+              className="bg-card border-border hover:border-primary/50 transition-all duration-300 group animate-slide-up overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </CardTitle>
-                    <span className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full text-xs font-medium text-primary">
-                      {project.category}
-                    </span>
-                  </div>
+              <div className="relative w-full h-48 overflow-hidden bg-secondary">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute top-4 right-4">
+                  <span className="inline-block px-3 py-1 bg-primary/90 backdrop-blur-sm border border-primary/30 rounded-full text-xs font-medium text-primary-foreground">
+                    {project.category}
+                  </span>
                 </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-2xl mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base text-foreground/80 mb-4">
@@ -69,7 +73,7 @@ const Projects = () => {
                   asChild
                 >
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    View Project
+                    Voir le projet
                     <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </Button>
