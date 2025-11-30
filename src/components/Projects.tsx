@@ -2,6 +2,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
+// ✅ Use the images YOU ALREADY imported
+import carRentalImage from '../assets/car-rental.jpg';
+import gymManagementImage from '../assets/gym-management.jpg';
+import schoolAppImage from '../assets/school-app.jpg';
+
 const Projects = () => {
   const projects = [
     {
@@ -9,24 +14,22 @@ const Projects = () => {
       description: "Analyse complète des exigences et planification Scrum avec notes d'architecture complètes. Construit avec des technologies web modernes et une conception d'API RESTful.",
       category: "Full Stack",
       link: "https://github.com/farah-mehrez",
-      image: require('../assets/car-rental.jpg'),
-      
+      image: carRentalImage,   // ✅ FIXED
     },
     {
       title: "Système de Gestion de Salle de Sport",
       description: "Adapté de la structure de location de voitures, avec gestion des membres, planification et traitement des paiements avec mises à jour en temps réel.",
       category: "Application Web",
       link: "https://github.com/farah-mehrez",
-      image: require('../gym-management.jpg'),
+      image: gymManagementImage,   // ✅ FIXED
     },
     {
       title: "Application Flutter de Présence Étudiante",
       description: "Système de suivi de présence en temps réel avec intégration Firebase. Fonctionnalités : scan de code QR, tableau de bord analytique et notifications push.",
       category: "Application Mobile",
       link: "https://github.com/farah-mehrez",
-      image: require('../school-app.jpg'),
+      image: schoolAppImage,   // ✅ FIXED
     },
-   
   ];
 
   return (
