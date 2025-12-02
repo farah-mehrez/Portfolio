@@ -13,21 +13,21 @@ const Projects = () => {
       title: "Application de Location de Voitures",
       description: "Analyse complète des exigences et planification Scrum avec notes d'architecture complètes. Construit avec des technologies web modernes et une conception d'API RESTful.",
       category: "Full Stack",
-      link: "https://github.com/farah-mehrez",
+      link: "https://github.com/farah-mehrez/Application-de-Location-de-Voitures",
       image: carRentalImage,   // ✅ FIXED
     },
     {
       title: "Système de Gestion de Salle de Sport",
       description: "Adapté de la structure de location de voitures, avec gestion des membres, planification et traitement des paiements avec mises à jour en temps réel.",
       category: "Application Web",
-      link: "https://github.com/farah-mehrez",
+      link: "https://github.com/farah-mehrez/Syst-me-de-Gestion-de-Salle-de-Sport",
       image: gymManagementImage,   // ✅ FIXED
     },
     {
       title: "Application Flutter de Présence Étudiante",
       description: "Système de suivi de présence en temps réel avec intégration Firebase. Fonctionnalités : scan de code QR, tableau de bord analytique et notifications push.",
       category: "Application Mobile",
-      link: "https://github.com/farah-mehrez",
+      link: "https://github.com/farah-mehrez/Application-Flutter-de-Presence",
       image: schoolAppImage,   // ✅ FIXED
     },
   ];
