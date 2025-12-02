@@ -2,47 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* LUNA Color Palette Design System - All colors in HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    /* LUNA Palette */
+    --luna-lightest: 187 78% 81%;    /* #A7EBF2 */
+    --luna-light: 191 47% 54%;       /* #54ACBF */
+    --luna-mid: 201 55% 35%;         /* #26658C */
+    --luna-dark: 201 93% 18%;        /* #023859 */
+    --luna-darkest: 210 95% 13%;     /* #011C40 */
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --background: 210 95% 8%;
+    --foreground: 187 78% 95%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --card: 210 80% 12%;
+    --card-foreground: 187 78% 95%;
 
-    --primary: 355 78% 57%;
-    --primary-foreground: 0 0% 100%;
+    --popover: 210 80% 12%;
+    --popover-foreground: 187 78% 95%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --primary: 187 78% 81%;
+    --primary-foreground: 210 95% 8%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --secondary: 201 55% 25%;
+    --secondary-foreground: 187 78% 95%;
 
-    --accent: 355 78% 57%;
-    --accent-foreground: 0 0% 100%;
+    --muted: 201 55% 20%;
+    --muted-foreground: 191 47% 65%;
 
-    --destructive: 0 84.2% 60.2%;
+    --accent: 191 47% 54%;
+    --accent-foreground: 210 95% 8%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 355 78% 57%;
+    --border: 201 55% 25%;
+    --input: 201 55% 25%;
+    --ring: 187 78% 81%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens for portfolio */
-    --hero-gradient: linear-gradient(135deg, hsl(355, 78%, 57%) 0%, hsl(355, 68%, 45%) 100%);
-    --section-gradient: linear-gradient(180deg, hsl(0, 0%, 4%) 0%, hsl(0, 0%, 6%) 100%);
-    --glow-shadow: 0 0 40px hsla(355, 78%, 57%, 0.3);
+    /* Custom design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(187, 78%, 81%) 0%, hsl(191, 47%, 54%) 100%);
+    --section-gradient: linear-gradient(180deg, hsl(210, 95%, 8%) 0%, hsl(210, 80%, 12%) 100%);
+    --glow-shadow: 0 0 40px hsla(187, 78%, 81%, 0.3);
     --smooth-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Gradient presets */
+    --gradient-ocean: linear-gradient(135deg, hsl(191, 47%, 54%), hsl(201, 55%, 35%));
+    --gradient-deep: linear-gradient(135deg, hsl(201, 55%, 35%), hsl(201, 93%, 18%));
+    --gradient-aurora: linear-gradient(135deg, hsl(187, 78%, 81%), hsl(191, 47%, 54%), hsl(201, 55%, 35%));
   }
 }
 
@@ -77,6 +87,18 @@ All colors MUST be HSL.
 
   .animate-slide-in-right {
     animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
   }
 
   @keyframes fadeIn {
@@ -123,6 +145,33 @@ All colors MUST be HSL.
     }
   }
 
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsla(187, 78%, 81%, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsla(187, 78%, 81%, 0.6);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
   .text-gradient {
     background: var(--hero-gradient);
     -webkit-background-clip: text;
@@ -132,10 +181,30 @@ All colors MUST be HSL.
 
   .btn-hero {
     @apply bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold 
-           transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(230,57,70,0.5)];
+           transition-all duration-300 hover:scale-105;
+    box-shadow: var(--glow-shadow);
+  }
+
+  .btn-hero:hover {
+    box-shadow: 0 0 50px hsla(187, 78%, 81%, 0.5);
   }
 
   .section-container {
     @apply max-w-6xl mx-auto px-6 py-20;
+  }
+
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-xl border border-border/50 rounded-2xl;
+  }
+
+  .gradient-border {
+    background: linear-gradient(135deg, hsl(var(--luna-lightest)), hsl(var(--luna-mid)));
+    padding: 1px;
+    border-radius: var(--radius);
+  }
+
+  .gradient-border > * {
+    background: hsl(var(--card));
+    border-radius: calc(var(--radius) - 1px);
   }
 }
